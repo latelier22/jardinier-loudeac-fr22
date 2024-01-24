@@ -1,13 +1,11 @@
 import React from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { site } from './site';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const siteMetadata = {
-  title: 'Couvreur à Loudéac',
-  description: 'PRO COUVREUR ET NETTOYAGE - Dave MIQUEL- 0780604044',
-};
+export const siteMetadata = site;
 
 export default function RootLayout({ children, pageTitle, pageDescription }) {
   const siteTitle = siteMetadata.title;

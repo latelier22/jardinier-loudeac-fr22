@@ -6,11 +6,16 @@ import MyLightBox from "../MyLightBox";
 import RootLayout from "../layout";
 
 const Travaux = () => {
-  const images = [
-    { src: "photo-maconnerie1.png", alt: "Description 1" },
-    { src: "photo-maconnerie2.png", alt: "Description 2" },
-    { src: "photo-maconnerie3.png", alt: "Description 3" },
-  ];
+  
+
+ // Déclarer les photos dans un tableau d'objets
+ const photos = [
+  { url: "photo-maconnerie1.png", alt: "gallery" },
+  { url: "photo-maconnerie2.png", alt: "gallery" },
+  { url: "photo-maconnerie3.png", alt: "gallery" },
+  { url: "photo-maconnerie1.png", alt: "gallery" },
+];
+
 
   const pageTitle = "Travaux divers";
   const pageDescription =
@@ -50,25 +55,7 @@ const Travaux = () => {
   return (
     <RootLayout pageTitle={pageTitle} pageDescription={pageDescription}>
       <Navbar />
-      <HeaderSimple />
-
-      <section className="container mx-auto mt-8 p-4 bg-gray-100">
-        <h1 className="text-4xl font-bold mb-4">{pageTitle}</h1>
-
-        {maconnerieParagraph}
-        {facadeParagraph}
-        {alleesParagraph}
-        {dallesParagraph}
-
-        <h2 className="text-2xl font-bold mb-2">Liste des Actions :</h2>
-        <ul className="list-disc ml-8">
-          {actionsTravaux.map((action, index) => (
-            <li key={index}>{action}</li>
-          ))}
-        </ul>
-      </section>
-
-      <MyLightBox images={images} />
+      <HeaderSimple photos={photos} />
 
       <Footer />
     </RootLayout>
