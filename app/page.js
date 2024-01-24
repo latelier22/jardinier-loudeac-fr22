@@ -4,6 +4,9 @@ import RootLayout from '../app/layout';
 import Navbar from './NavBar';
 import HeaderSimple from './headerSimple';
 import Footer from './Footer';
+import ImagesBar from './ImagesBar'
+import ListeActionsGauche from './ListeActionsGauche';
+import { listesActions } from './site';
 
 const Home = () => {
   // Dynamic metadata for the home page
@@ -30,35 +33,29 @@ const Home = () => {
     },
   ];
 
+
+    // Déclarer les photos dans un tableau d'objets
+    const photos = [
+      { url: "Groupe_21.png", alt: "gallery" },
+      { url: "Groupe_13.png", alt: "gallery" },
+      { url: "Groupe_17.png", alt: "gallery" },
+      { url: "Groupe_25.png", alt: "gallery" },
+    ];
+
+
   return (
     <RootLayout pageTitle={pageTitle} pageDescription={pageDescription}>
       <Navbar />
-      <HeaderSimple />
+      <HeaderSimple photos = {photos} />
+      <ImagesBar/>
       
-      <section className="container mx-auto mt-8 p-4 bg-gray-100">
-        <h1 className="text-4xl font-bold mb-4">Bienvenue chez PRO COUVERTURE LOUDEAC</h1>
-
-        <p className="text-lg mb-4">
-          Nous sommes fiers de vous offrir des services de couverture de haute qualité à Loudéac et ses environs. Avec une équipe d&apos;experts dévoués, nous nous engageons à fournir des solutions exceptionnelles pour répondre à vos besoins en matière de toiture.
-        </p>
-
-        <p className="text-lg mb-4">
-          Que ce soit pour la <Link href="/reparation" className="text-blue-500">réparation</Link>, l&apos;<Link href="/entretien" className="text-blue-500">entretien</Link>, la gestion des <Link href="/fuite" className="text-blue-500">fuites de toit</Link> ou d&apos;autres <Link href="/travaux" className="text-blue-500">travaux divers de maçonnerie</Link>, nous sommes là pour vous offrir des services fiables et professionnels. Explorez nos différentes sections pour en savoir plus sur nos activités.
-        </p>
-      </section>
-
-      <section className="container mx-auto mt-8 p-4 bg-gray-100">
-        <h2 className="text-2xl font-bold mb-2">Liste Globale d&apos;Actions:</h2>
-        <ul className="list-disc ml-8">
-          {globalActions.map((action, index) => (
-            <li key={index}>
-              <Link href={action.link} className="hover:text-blue-500 hover:font-bold">
-                {action.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <ListeActionsGauche  actions={listesActions[0].actions} listeTitle={listesActions[0].title} listeSubTitle={listesActions[0].subTitle} photo={listesActions[0].photo} gauche={true} bgColor="bg-green-200"/>
+    
+      <ListeActionsGauche actions={listesActions[1].actions} listeTitle={listesActions[1].title} listeSubTitle={listesActions[1].subTitle} photo={listesActions[1].photo} gauche={false}/>
+      <ListeActionsGauche actions={listesActions[2].actions} listeTitle={listesActions[2].title} listeSubTitle={listesActions[2].subTitle} photo={listesActions[2].photo} gauche={true} bgColor="bg-green-200"/>
+      <ListeActionsGauche actions={listesActions[3].actions} listeTitle={listesActions[3].title} listeSubTitle={listesActions[3].subTitle} photo={listesActions[3].photo} gauche={false}/>
+      <ListeActionsGauche actions={listesActions[4].actions} listeTitle={listesActions[4].title} listeSubTitle={listesActions[4].subTitle} photo={listesActions[4].photo} gauche={true} bgColor="bg-green-200"/>
+     
 
       <Footer />
     </RootLayout>

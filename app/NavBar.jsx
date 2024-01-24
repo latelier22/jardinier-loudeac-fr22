@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import { menuItems } from "./site";
 
 const Navbar = () => {
   useEffect(() => {
@@ -10,21 +11,12 @@ const Navbar = () => {
     init();
   }, []);
 
-  // Définir les menus et les routes
-  const menuItems = [
-    { label: "Accueil", route: "/" },
-    { label: "Entretien", route: "/entretien" },
-    { label: "Réparation", route: "/reparation" },
-    { label: "Fuite de toit", route: "/fuite" },
-    { label: "Travaux divers", route: "/travaux-divers" },
-    { label: "Contact", route: "/contact" },
-  ];
-
+ 
   return (
-    <nav className="relative flex w-full items-center justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start" data-te-navbar-ref>
+    <nav className="relative flex w-full items-center justify-between bg-green-800 py-2 text-white shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start" data-te-navbar-ref>
       <div className="flex w-full flex-wrap items-center justify-start px-3">
       <a href="/" className="ml-2">
-            <img src="logo.png" className="h-6 w-6" alt="Accueil" />
+            <img src="logo.png" className="h-8 w-auto bg-white"   alt="Accueil" />
           </a>
         <div className="flex items-center">
           <button
@@ -54,7 +46,7 @@ const Navbar = () => {
         <div className="!visible hidden grow basis-[100%] items-center lg:!flex lg:basis-auto mx-auto" id="navbarSupportedContentY" data-te-collapse-item>
           <ul className="mx-auto flex flex-col lg:flex-row" data-te-navbar-nav-ref>
           <a href="/" className="ml-2 lg:hidden">
-            <img src="logo.png" className="h-6 w-6" alt="Accueil" />
+            <img src="logo.png" className="h-8 w-auto" alt="Accueil" />
           </a>
             {/* Utiliser une boucle pour générer les éléments de la navbar */}
             {menuItems.map((menuItem, index) => (

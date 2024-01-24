@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import { menuItems, site } from "./site";
 
 const Footer = () => {
   useEffect(() => {
@@ -10,33 +11,22 @@ const Footer = () => {
     init();
   }, []);
 
-  // Définir les menus et les routes
-  const menuItems = [
-    { label: "Accueil", route: "/" },
-    { label: "Entretien", route: "/entretien" },
-    { label: "Réparation", route: "/reparation" },
-    { label: "Fuite de toit", route: "/fuite" },
-    { label: "Travaux divers", route: "/travaux-divers" },
-    { label: "Contact", route: "/contact" },
-  ];
+
+
 
   // Définir un tableau d'objets pour les photos du footer
   const photoFooter = [
-    { url: "photo-toit1.png", alt: "gallery" },
-    { url: "photo-fuite1.png", alt: "gallery" },
-    { url: "photo-fuite2.png", alt: "gallery" },
-    { url: "photo-maconnerie1.png", alt: "gallery" },
-    { url: "photo-maconnerie2.png", alt: "gallery" },
+   
   ];
 
   return (
-    <footer className="bg-black text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200">
-      <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
+    <footer className="bg-green-900 text-center text-green-100 dark:bg-neutral-600 dark:text-neutral-200">
+      <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-end">
         <div className="mr-12 hidden md:block">
           <span>Restons en contact sur les réseaux sociaux</span>
         </div>
         <div className="flex justify-center items-center">
-          <a href="#!" className="mr-6 text-neutral-600 dark:text-neutral-200">
+          <a href="#!" className="mr-6 text-sky-300 dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4"
@@ -46,7 +36,7 @@ const Footer = () => {
               <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
             </svg>
           </a>
-          <a href="#!" className="mr-6 text-neutral-600 dark:text-neutral-200">
+          {/* <a href="#!" className="mr-6 text-neutral-600 dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4"
@@ -99,46 +89,52 @@ const Footer = () => {
             >
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
             </svg>
-          </a>
+          </a> */}
         </div>
       </div>
 
       <div className="mx-6 pt-8 pb-4 text-center">
-        <div className="mb-6 bg-black">
-          <h5 className="mb-2 text-white font-bold uppercase">
-            Une fuite ou une fissure dans votre toiture ?
+        <div className="mb-6 bg-lime-300">
+          <h5 className="mb-2 text-green-900 font-bold uppercase">
+            {/* Une fuite ou une fissure dans votre toiture ? */}
           </h5>
 
-          <p className="mb-4 text-orange-500">Il faut agir vite !</p>
+          <p className="mb-4 text-green-900">Intervention 7j/7 !</p>
           <p className="mb-4 text-white">
-            Nous intervenons 7/7 J - 24/24h en cas d&apos;urgences ou fuites de
-            votre toiture.
+            {/* Nous intervenons 7/7 J - 24/24h en cas d&apos;urgences ou fuites de */}
+            {/* votre toiture. */}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 mb-4">
           <div className="mb-6">
-            <h5 className="mb-2.5 font-bold text-white dark:text-neutral-200">
+            <h5 className="mb-2.5 font-bold text-green-300 dark:text-neutral-200">
               Qui sommes-nous?
             </h5>
 
-            <ul className="mb-0 list-none text-yellow-500">
-              <li>PRO COUVREUR ET NETTOYAGE</li>
-              <li>Dave MIQUEL</li>
-              <li>0780604044</li>
-              <li className=" text-white">N° de SIRET 88464374300013</li>
+            <ul className="mb-0 list-none text-green-100">
+              <li>{site.societe}</li>
+              <li>{site.contact}</li>
+              <li>{site.adresse}</li>
+              <li>{site.codePostal} {site.ville}</li>
+              <li>{site.telephone}</li>
+              <li>{site.email}</li>
+
+
+             
+              <li className=" text-white">N° de SIRET ..............</li>
             </ul>
           </div>
 
           <div className="mb-6 flex-col flex items-center">
             <h5 className="mb-2.5 font-bold text-yellow-500 dark:text-neutral-200">
-              DEVIS GRATUIT !
+              {/* DEVIS GRATUIT ! */}
             </h5>
             <img src="photo-devis-gratuit.png" className="h-60  " alt="..." />
           </div>
 
           <div className="mb-6">
-            <h5 className="mb-2.5 font-bold  text-white  dark:text-neutral-200">
+            <h5 className="mb-2.5 font-bold  text-green-300  dark:text-neutral-200">
               Nos services
             </h5>
 
@@ -147,7 +143,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={menuItem.route}
-                    className=" text-orange-500 hover:text-yellow-500 dark:text-neutral-200"
+                    className=" text-lime-400 hover:text-green-200 dark:text-neutral-200"
                   >
                     {menuItem.label}
                   </a>
