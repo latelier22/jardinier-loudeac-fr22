@@ -14,25 +14,25 @@ const HeaderSimple = ({photos}) => {
 
   return (
     <header>
-      <div className="bg-green-900 px-6 py-6 text-center text-neutral-800 dark:bg-neutral-700 dark:text-neutral-200">
+      <div className="bg-sky-900 px-6 py-6 text-center text-neutral-800 dark:bg-neutral-700 dark:text-neutral-200">
         <div className="flex flex-col  lg:flex-row first-letter:lg:justify-around  justify-center items-center">
           <div className="hidden md:block lg:self-start">
             <img
               src="logo-sans-fond.png"
-              className="bg-white rounded-full w-10 mx-4  p-4 md:w-40 lg:w-96 h-auto "
+              className="bg-white rounded-3xl w-10 mx-4  p-4 md:w-40 lg:w-96 h-auto "
               alt=""
             />
           </div>
           <div className="flex-col justify-center">
             <h1 className="mb-6 text-white  text-5xl font-bold">
-              Des prestations pour toutes les saisons
+              Un service de nettoyage industriel de qualité!
             </h1>
             <div className="flex flex-row justify-around items-center">
-            <h3 className="mb-8 text-green-100 text-3xl font-bold">
+            <h3 className="mb-8 text-sky-100 text-3xl font-bold">
               Loudéac et ses alentours
             </h3>
             <a
-              className="self-stop rounded h-10 bg-green-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-green-900 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-lime-300 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-lime-200 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:text-green-900 focus:outline-none focus:ring-0 active:bg-lime-100 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+              className="self-stop rounded h-10 bg-sky-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-sky-900 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-cyan-300 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-cyan-200 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:text-sky-900 focus:outline-none focus:ring-0 active:bg-cyan-100 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
               data-te-ripple-init
               data-te-ripple-color="light"
               href="/contact"

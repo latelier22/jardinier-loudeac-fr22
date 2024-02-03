@@ -39,7 +39,7 @@ const ImagesBar = () => {
           {/* Make sure the h3 element is properly styled and visible */}
           
         </div>
-        <h3 className="text-green-900 text-center mt-2 ">{photo.text}</h3>
+        <h3 className="text-sky-900 text-center mt-2 ">{photo.text}</h3>
         </div>
       </div>
     ))}

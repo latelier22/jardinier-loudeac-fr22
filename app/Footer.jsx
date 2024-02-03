@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-green-900 text-center text-green-100 dark:bg-neutral-600 dark:text-neutral-200">
+    <footer className="bg-sky-900 text-center text-sky-100 dark:bg-neutral-600 dark:text-neutral-200">
       <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-end">
         <div className="mr-12 hidden md:block">
           <span>Restons en contact sur les réseaux sociaux</span>
@@ -94,12 +94,12 @@ const Footer = () => {
       </div>
 
       <div className="mx-6 pt-8 pb-4 text-center">
-        <div className="mb-6 bg-lime-300">
-          <h5 className="mb-2 text-green-900 font-bold uppercase">
+        <div className="mb-6 bg-cyan-300">
+          <h5 className="mb-2 text-sky-900 font-bold uppercase">
             {/* Une fuite ou une fissure dans votre toiture ? */}
           </h5>
 
-          <p className="mb-4 text-green-900">Intervention 7j/7 !</p>
+          <p className="mb-4 text-sky-900">Intervention 7j/7 !</p>
           <p className="mb-4 text-white">
             {/* Nous intervenons 7/7 J - 24/24h en cas d&apos;urgences ou fuites de */}
             {/* votre toiture. */}
@@ -108,21 +108,19 @@ const Footer = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 mb-4">
           <div className="mb-6">
-            <h5 className="mb-2.5 font-bold text-green-300 dark:text-neutral-200">
+            <h5 className="mb-2.5 font-bold text-sky-300 dark:text-neutral-200">
               Qui sommes-nous?
             </h5>
 
-            <ul className="mb-0 list-none text-green-100">
+            <ul className="mb-0 list-none text-sky-100">
               <li>{site.societe}</li>
               <li>{site.contact}</li>
               <li>{site.adresse}</li>
               <li>{site.codePostal} {site.ville}</li>
               <li>{site.telephone}</li>
               <li>{site.email}</li>
-
-
-             
-              <li className=" text-white">N° de SIRET ..............</li>
+              <br/>
+              <li className=" text-white">N° de SIRET {site.SIRET}</li>
             </ul>
           </div>
 
@@ -134,7 +132,7 @@ const Footer = () => {
           </div>
 
           <div className="mb-6">
-            <h5 className="mb-2.5 font-bold  text-green-300  dark:text-neutral-200">
+            <h5 className="mb-2.5 font-bold  text-sky-300  dark:text-neutral-200">
               Nos services
             </h5>
 
@@ -143,7 +141,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={menuItem.route}
-                    className=" text-lime-400 hover:text-green-200 dark:text-neutral-200"
+                    className=" text-cyan-400 hover:text-sky-200 dark:text-neutral-200"
                   >
                     {menuItem.label}
                   </a>

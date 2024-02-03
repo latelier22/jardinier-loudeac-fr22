@@ -4,7 +4,7 @@
 @layer base {
   html {
     @apply text-[#4f4f4f];
-    @apply bg-green-100;
+    @apply bg-sky-100;
     @apply flex-col;
   }
   html.dark {
