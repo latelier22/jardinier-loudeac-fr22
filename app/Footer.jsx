@@ -96,13 +96,12 @@ const Footer = () => {
       <div className="mx-6 pt-8 pb-4 text-center">
         <div className="mb-6 bg-cyan-300">
           <h5 className="mb-2 text-sky-900 font-bold uppercase">
-            {/* Une fuite ou une fissure dans votre toiture ? */}
+           
           </h5>
 
-          <p className="mb-4 text-sky-900">Intervention 7j/7 !</p>
+          <p className="mb-4 text-sky-900">Un service RAPIDE  et de QUALITE !</p>
           <p className="mb-4 text-white">
-            {/* Nous intervenons 7/7 J - 24/24h en cas d&apos;urgences ou fuites de */}
-            {/* votre toiture. */}
+            
           </p>
         </div>
 
