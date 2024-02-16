@@ -10,8 +10,6 @@ const HeaderSimple = ({photos}) => {
     init();
   }, []);
 
-
-
   return (
     <header>
       <div className="bg-green-900 px-6 py-6 text-center text-neutral-800 dark:bg-neutral-700 dark:text-neutral-200">
