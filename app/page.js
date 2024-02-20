@@ -31,11 +31,11 @@ const Home = () => {
       <HeaderSimple photos = {photos} />
       {/* <ImagesBar/> */}
       
-      <ListeActionsGauche  actions={listesActions[0].actions} listeTitle={listesActions[0].title} listeSubTitle={listesActions[0].subTitle} photo={listesActions[0].photo} gauche={true} bgColor="bg-sky-200"/>
+      <ListeActionsGauche  route={listesActions[0].route} actions={listesActions[0].actions} listeTitle={listesActions[0].title} listeSubTitle={listesActions[0].subTitle} photo={listesActions[0].photo} gauche={true} bgColor="bg-sky-200"/>
     
-      <ListeActionsGauche actions={listesActions[1].actions} listeTitle={listesActions[1].title} listeSubTitle={listesActions[1].subTitle} photo={listesActions[1].photo} gauche={false}/>
-      <ListeActionsGauche actions={listesActions[2].actions} listeTitle={listesActions[2].title} listeSubTitle={listesActions[2].subTitle} photo={listesActions[2].photo} gauche={true} bgColor="bg-sky-200"/>
-      <ListeActionsGauche actions={listesActions[3].actions} listeTitle={listesActions[3].title} listeSubTitle={listesActions[3].subTitle} photo={listesActions[3].photo} gauche={false}/>
+      <ListeActionsGauche route={listesActions[1].route} actions={listesActions[1].actions} listeTitle={listesActions[1].title} listeSubTitle={listesActions[1].subTitle} photo={listesActions[1].photo} gauche={false}/>
+      <ListeActionsGauche route={listesActions[2].route} actions={listesActions[2].actions} listeTitle={listesActions[2].title} listeSubTitle={listesActions[2].subTitle} photo={listesActions[2].photo} gauche={true} bgColor="bg-sky-200"/>
+      <ListeActionsGauche route={listesActions[3].route} actions={listesActions[3].actions} listeTitle={listesActions[3].title} listeSubTitle={listesActions[3].subTitle} photo={listesActions[3].photo} gauche={false}/>
     
      
 

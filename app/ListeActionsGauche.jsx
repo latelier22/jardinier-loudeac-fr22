@@ -8,7 +8,8 @@ const ListeActionsGauche = ({
   photo,
   gauche,
   children,
-  bgColor
+  bgColor,
+  route
 }) => {
   useEffect(() => {
     const init = async () => {
@@ -22,8 +23,9 @@ const ListeActionsGauche = ({
 
   return (
 <div className={`container mx-auto px-5 py-2 lg:px-32 lg:pt-12 ${gauche ? "animate-slideLeft" : "animate-slideRight"}`}>
+<a href={route}>
   <div className={`flex flex-col items-center ${gauche ? bgColor : ""}`}>
-    <div className="flex flex-col md:flex-row align-middle items-center">
+    <div className="flex flex-col  md:flex-row align-middle items-center">
       <img
         alt={photo.alt}
         className={
@@ -61,6 +63,7 @@ const ListeActionsGauche = ({
           />
         </div>
       </div>
+      </a>
     </div>
   );
 };

@@ -31,12 +31,7 @@ const MyPage = ({ params }) => {
 
       <HeaderSimple photos={page.photos} title={page.title}/>
 
-      <ImagesBar photos={page.photos}/>
-
-      {page.sections.map((section, index) => (
-        <Section key={index} section={section} />
-      ))}
-      {/* <Pictos /> */}
+      {/* <ImagesBar photos={page.photos}/> */}
 
       <div className="">
         <Cards cards={page.cards}  />
